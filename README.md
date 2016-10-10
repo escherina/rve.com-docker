@@ -50,16 +50,18 @@ Do this if you make any changes to the following configuration files:
 ### Images
 
 - List all docker images: `docker images`
-- The only images you need to keep are `node` and `wilcofoliodocker_gulp`. When you run `docker images` it should look like this:
+- The only images you need to keep are `node` and `rvedocker_gulp`. When you run `docker images` it should look like this:
+
   ```
   $ docker images
   REPOSITORY              TAG        IMAGE ID        CREATED         SIZE
-  wilcofoliodocker_gulp   latest     eeba12a3557f    19 hours ago    916.6 MB
+  rvedocker_gulp          latest     eeba12a3557f    19 hours ago    916.6 MB
   node                    latest     72d4ec634f1f    5 weeks ago     649.7 MB
   ```
 
 ### Clean-up procedure
 To get rid of any extra containers or images (and save disk space) you can periodically run the following (in order):
+
 1. Delete all unused containers: `docker rm $( docker ps -q -f status=exited)`
   - If there are no eligible containers for deletion, you will get the error `"rm" requires a minimum of 1 argument.`
 2. Delete all unused images: `docker rmi $( docker images -q -f dangling=true)`

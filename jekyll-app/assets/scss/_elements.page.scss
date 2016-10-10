@@ -1,0 +1,33 @@
+html {
+  background-image: radial-gradient(ellipse at top left, $color-gray-light2, $color-white);
+  color: $color-text;
+  font-family: "karla-regular", "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  font-size: ($base-font-size / 16px) * 1em;
+  line-height: $base-line-height / $base-font-size;
+  min-height: 100%;
+  padding: ($base-spacing-unit / 2);
+  padding-bottom: 3.5rem;
+
+  @include breakpoint(tiny) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(small) {
+    padding: $base-spacing-unit;
+  }
+
+  @include breakpoint(large) {
+    font-size: ($base-font-size / 16px) * 1.125em;
+    padding: 0;
+  }
+
+  @include breakpoint(x-large) {
+    font-size: ($base-font-size / 16px) * 1.25em;
+  }
+}
+
+hr {
+  background: $color-gray-medium;
+  border: 0;
+  height: 1pt; // 1px height reveals a bug: the 2nd hr is thicker?!
+}

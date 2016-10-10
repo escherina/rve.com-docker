@@ -1,0 +1,145 @@
+.project-nav {
+  height: 1.5rem;
+  margin-bottom: 1rem;
+
+  &:nth-of-type(1) {
+    border-bottom: 1px solid $color-gray-medium;
+  }
+
+  &:nth-of-type(2) {
+    border-top: 1px solid $color-gray-medium;
+  }
+}
+
+.project-nav__prev {
+  float: left;
+  width: 50%;
+}
+
+.project-nav__next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+.project__img {
+  display: block;
+  margin: 0 auto 1rem;
+
+  figcaption {
+    background-color: transparent;
+    border-top: 4px solid $color-gray-medium;
+    padding-bottom: 0;
+    padding-top: 0.625rem;
+  }
+}
+
+.project__img--lg {
+  @include project-image(300px, 227px);
+
+  @include breakpoint(med-and-below) {
+    @include project-image(620px, 470px);
+  }
+
+  @include breakpoint(xl-and-below) {
+    @include project-image(800px, 606px);
+  }
+
+  @include breakpoint(x-large) {
+    @include project-image(800px, 606px);
+  }
+}
+
+.project__img--med {
+  @include project-image(300px, 400px);
+
+  @include breakpoint(med-and-below) {
+    @include project-image(410px, 547px);
+    }
+
+  @include breakpoint(xl-and-below) {
+    @include project-image(520px, 693px);
+  }
+
+  @include breakpoint(x-large) {
+    @include project-image(520px, 693px);
+  }
+}
+
+.project__img--sm {
+  @include project-image(300px, 478px);
+
+  @include breakpoint(med-and-below) {
+    @include project-image(320px, 510px);
+  }
+
+  @include breakpoint(medium) {
+    @include project-image(320px, 510px);
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  border: 1px solid $color-gray-medium;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    width: 48.5%;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.4;
+    }
+
+    .grid-item__caption::after {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    transition: opacity 0.5s;
+  }
+}
+
+.grid-item__caption {
+  background-color: transparent;
+  border-top: 4px solid #ccc;
+  line-height: 1;
+  padding-bottom: 0;
+  padding-top: 0.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  &::after {
+    background-color: $color-brand;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: -4px;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.5s, opacity 0.5s;
+    width: 100%;
+    z-index: 20;
+  }
+}

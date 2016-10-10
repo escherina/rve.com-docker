@@ -1,0 +1,83 @@
+.page-header {
+  margin-bottom: 1.5rem;
+
+  @include breakpoint(large) {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    width: 14rem;
+
+    &::after {
+      background: linear-gradient(to bottom, $color-transparent 0%, #d5d5d5 15%, $color-transparent 100%);
+      content: '';
+      display: block;
+      height: 80%;
+      position: absolute;
+      right: -4px;
+      top: 2rem;
+      width: 4px;
+    }
+  }
+}
+
+.page-header__title-wrapper {
+  @include breakpoint(large) {
+    padding-top: 4rem;
+  }
+}
+
+.page-title {
+  display: inline-block;
+  font-family: "Work Sans", Tahoma, "Dejavu Sans", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03125rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  word-spacing: -0.4rem;
+
+  @include breakpoint(small) {
+    font-size: 2.5rem;
+  }
+
+  @include breakpoint(large) {
+    padding-right: 2rem;
+    text-align: right;
+    word-spacing: 200px;
+  }
+
+  a {
+    color: $color-black;
+  }
+}
+
+.page-title--thin {
+  font-weight: 300;
+}
+
+.page-title__sub-title {
+  @include breakpoint(large) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.page-title--x-large {
+  display: none;
+  visibility: hidden;
+
+  @include breakpoint(large) {
+    display: block;
+    font-family: "Work Sans", Tahoma, "Dejavu Sans", Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.03125rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    visibility: visible;
+    word-spacing: -0.4rem;
+  }
+}

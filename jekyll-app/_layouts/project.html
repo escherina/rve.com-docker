@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign document = site[the_collection] %}
+  {% endif %}
+{% for links in document  %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+<article>
+  <div class="project-nav">{% if prevurl %}<div class="project-nav__prev"><a href="{{prevurl}}">&larr; Previous project</a></div>{% endif %}{% if nexturl %}<div class="project-nav__next"><a href="{{nexturl}}">Next project &rarr;</a></div>{% endif %}</div>
+  <header>
+    <h1 class="content__title">{{ page.title }}</h1>
+  </header>
+  {% if page.skills %}<ul>{% for skill in page.skills %}<li>{{ skill }}</li>{% endfor %}</ul>{% endif %}
+
+  {% if page.feature_image %}
+  <figure class="project__img project__img--lg">
+    {% picture {{ page.feature_image }} alt="{{ page.feature_desc }}" %}
+  </figure>
+  {% endif %}
+
+  {{ content }}
+  <div class="project-nav">{% if prevurl %}<div class="project-nav__prev"><a href="{{prevurl}}">&larr; Previous project</a></div>{% endif %}{% if nexturl %}<div class="project-nav__next"><a href="{{nexturl}}">Next project &rarr;</a></div>{% endif %}</div>
+</article>

@@ -1,0 +1,15 @@
+td,
+th {
+  border: 1px solid $color-text;
+  padding: ($base-font-size / 2);
+}
+
+th,
+tfoot {
+  background-color: $color-gray-medium;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: $color-gray-light;
+}

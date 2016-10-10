@@ -1,0 +1,14 @@
+<header class="page-header" role="banner">
+
+  <div class="page-header__title-wrapper">
+    <h1 class="page-title"><a href="{{ site.baseurl }}/">Rhian <span class="page-title--thin">van</span> Esch</a>{% if page.url contains "blog" %}<span class="page-title__sub-title">: Blog</span>{% elsif page.url contains "projects" %}<span class="page-title__sub-title">: Projects</span>{% elsif page.url contains "contact" %}<span class="page-title__sub-title">: Contact</span>{% endif %}</h1>
+  </div>
+
+  <nav role="navigation" class="page-nav">
+    <ul class="page-nav__list">
+    {% assign sorted_pages = site.pages | sort:"order" %}{% for my_page in sorted_pages %}{% unless my_page.exclude %}{% if my_page.title %}<li class="page-nav__list-item"><a class="page-nav__list-link{% if page.url == my_page.url %} page-nav__list-item--active{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>{% endif %}{% endunless %}
+    {% endfor %}
+    </ul>
+  </nav>
+
+</header>

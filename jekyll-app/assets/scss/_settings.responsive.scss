@@ -1,0 +1,10 @@
+// Breakpoints
+$breakpoints: (
+  'tiny': (max-width: 20rem),   // screen width below 320px
+  'small': (min-width: 32rem),   // screen width above 512px
+  'medium': (min-width: 40rem),  // screen width above 640px
+  'large': (min-width: 69rem),   // screen width above 1104px
+  'x-large': (min-width: 120rem), // screen width above 1920px
+  'med-and-below': (max-width: 40rem),
+  'xl-and-below': (max-width: 120rem)
+);

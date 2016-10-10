@@ -1,0 +1,38 @@
+// Breakpoints
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+			@content;
+		}
+  } @else {
+		@warn "Couldn't find a your breakpoint named `#{$name}`.";
+	}
+}
+
+@mixin project-image($image-width, $image-height) {
+  max-width: calc(#{$image-width} + 2px + 1.25rem);
+  max-height: calc(#{$image-height} + 6px + 2.75rem);
+}
+
+// Positioning shorthand
+@mixin position ($type, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: $type;
+}
+
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size) * 1rem;
+  @if $line-height == auto { // if we haven't specifically set a line-height
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size); // let's calculate one automatically
+  } @else { // but if we have set a line-height
+    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+      line-height: $line-height;
+    } @elseif ($line-height != none and $line-height != false) { // if we haven't set line-height properly
+      @warn "D'oh! '#{$line-height}' is not a valid value for `line-height`."
+    }
+  }
+}

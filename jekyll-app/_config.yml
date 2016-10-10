@@ -1,0 +1,127 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Rhian van Esch
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://192.168.99.100:9999" # the base hostname & protocol for your site
+twitter_username: escherina
+github_username:  escherina
+
+gems:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Build settings
+markdown: redcarpet
+source: ./jekyll-app
+destination: ./build
+permalink: /blog/:year/:month/:day/:title/
+exclude: ["node_modules"]
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+sitemap:
+  include_posts:
+    - "/blog/index.html"
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "projects" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "project"
+
+picture:
+  source: assets/images
+  output: assets/images
+  markup: picture
+  presets:
+    # Full width pictures
+    default:
+      ppi: [1, 2]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_x-lg:
+        media: "(min-width: 120rem)"
+        width: 800
+      source_lg:
+        media: "(max-width: 120rem)"
+        width: 800
+      source_med:
+        media: "(max-width: 40rem)"
+        width: 620
+      source_default:
+        media: "(min-width: 20rem)"
+        width: 300
+    project-med:
+      ppi: [1, 2]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_x-lg:
+        media: "(min-width: 120rem)"
+        width: 520
+      source_lg:
+        media: "(max-width: 120rem)"
+        width: 520
+      source_med:
+        media: "(max-width: 40rem)"
+        width: 410
+      source_default:
+        media: "(min-width: 20rem)"
+        width: 200
+    project-sm:
+      ppi: [1, 2]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_lg:
+        media: "(min-width: 40rem)"
+        width: 320
+      source_med:
+        media: "(max-width: 40rem)"
+        width: 320
+      source_default:
+        media: "(min-width: 20rem)"
+        width: 300
+    grid:
+      ppi: [1, 2]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_med:
+        media: "(min-width: 40rem)" # anything above 640
+        width: 380
+      source_default:
+        media: "(min-width: 32rem)" # anything above 320
+        width: 600

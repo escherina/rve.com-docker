@@ -1,0 +1,25 @@
+---
+title: Home
+layout: default
+order: 1
+---
+
+<ul>
+  <li>Accessible</li>
+  <li>Responsive</li>
+  <li>Performant</li>
+  <li>Efficient</li>
+</ul>
+
+<p>My name is Rhian van Esch and I'm a British person with a Welsh first name and a Dutch surname. I live in London.</p>
+
+<h4>Recent Posts</h4>
+
+{% for post in site.posts limit: 2 %}
+  <h5 class="widget__recent-posts">
+    {% if post.feature_image %}
+    <img src="/assets/images/{{ post.feature_image }}">
+    {% endif %}
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </h5>
+{% endfor %}

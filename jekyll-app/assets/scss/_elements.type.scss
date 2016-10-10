@@ -1,0 +1,62 @@
+h1 {
+  @include font-size(24px, 1);
+}
+
+h2 {
+  @include font-size(22px, 1);
+  padding: 1rem 0 .25rem 0;
+  border-bottom: 1px solid $color-gray-medium;
+}
+
+h3 {
+  @include font-size(20px, 1);
+}
+
+h4 {
+  @include font-size(18px, 1);
+}
+
+h5 {
+  @include font-size(16px, 1);
+}
+
+h6 {
+  @include font-size(16px, 1);
+}
+
+pre {
+  background-color: $color-gray-light;
+  padding: ($base-font-size) / 2;
+
+  figure & {
+    margin: 0;
+  }
+}
+
+code {
+  background-color: $color-gray-light;
+  padding: 2px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+p + .list-nomargin {
+  margin-top: -$base-spacing-unit;
+}
+
+blockquote {
+  background-color: $color-gray-light;
+  border-left: ($base-spacing-unit / 4) solid $color-gray-medium;
+  padding: ($base-spacing-unit / 2);
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+abbr {
+  cursor: help;
+}

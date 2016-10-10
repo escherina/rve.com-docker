@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre,
+audio,
+video {
+  margin-bottom: $base-spacing-unit;
+}
+
+ul,
+ol,
+dd {
+  margin-left: $base-spacing-unit;
+}

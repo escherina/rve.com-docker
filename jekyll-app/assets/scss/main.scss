@@ -1,0 +1,52 @@
+// Based on ITCSS by Harry Roberts @ csswizardry.com
+// Each layer should contain CSS of similar specificity, similar reach, and
+// similar explicitness.
+
+// SETTINGS
+// Global settings and variables like base font-size, colours, etc.
+@import 'settings.fonts';
+@import 'settings.global';
+@import 'settings.colours';
+@import 'settings.responsive';
+
+// TOOLS
+// Globally available tool: mixins and functions.
+@import 'tools.mixins';
+
+// GENERIC
+// Low-specificity rulesets: resets, normalize, etc.
+@import 'generic.normalize';
+@import 'generic.reset';
+@import 'generic.margins';      // set default margin-bottom or margin-left
+
+// ELEMENTS
+// Unclassed html elements. Rarely changed after initial set-up.
+// N.B. Usually the last layer to contain unclassed html elements.
+@import 'elements.page';        // html
+@import 'elements.type';        // p, pre, code, lists, blockquote, headings
+@import 'elements.links';       // a
+@import 'elements.tables';      // tables
+@import 'elements.images';      // img
+@import 'elements.forms';       // forms
+
+// OBJECTS
+// Styling non-cosmetic design patterns, e.g. wrapper, media object. Class
+// based selectors.
+@import 'objects.codewrapper';
+
+// COMPONENTS
+// Style recognisable pieces of UI, still with classes.
+
+@import 'components.page';
+@import 'components.header';
+@import 'components.nav';
+@import 'components.blog';
+@import 'components.projects';
+@import 'components.contact';
+
+// TRUMPS
+// Special case declarations that style heavy-handedly, e.g. !important. Highest
+// specificity occurs here. Overrides and helper classes.
+@import 'trumps.all';
+
+@import 'syntax-highlighting';

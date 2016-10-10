@@ -1,0 +1,56 @@
+fieldset {
+  padding: ($base-spacing-unit / 2);
+}
+
+legend {
+  padding: 0 ($base-spacing-unit / 2);
+}
+
+input,
+select {
+  padding: 2px;
+}
+
+textarea {
+  box-sizing: border-box;
+  padding: ($base-spacing-unit / 4);
+  width: 100%;
+}
+
+label,
+input {
+  vertical-align: middle;
+}
+
+label[for="textarea"] {
+  display: block;
+}
+
+button {
+  background-color: $color-link;
+  border: 1px solid $color-link;
+  color: $color-gray-light;
+  padding: ($base-spacing-unit / 4) ($base-spacing-unit / 2);
+
+  &:hover {
+    background-color: $color-brand-highlight;
+    border-color: $color-brand-highlight;
+  }
+
+  &:disabled {
+    background-color: $color-gray-light;
+    border-color: darken($color-gray-medium, 10%);
+    color: darken($color-gray-medium, 10%);
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $color-gray-light;
+      border-color: darken($color-gray-medium, 10%);
+      color: darken($color-gray-medium, 10%);
+    }
+  }
+}
+
+form p:last-of-type {
+  margin-bottom: 0;
+}

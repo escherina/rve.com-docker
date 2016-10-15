@@ -5,7 +5,7 @@ order: 2
 ---
 
 <div class="grid-container">
-  {% for project in site.projects %}
+  {% for project in site.projects reversed %}
   <figure class="grid-item">
     <a href="{{ project.url | prepend: site.baseurl }}">
     {% if project.feature_image %}

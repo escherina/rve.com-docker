@@ -18,7 +18,6 @@ layout: default
   {% assign prev = links %}
 {% endfor %}
 <article>
-  <div class="project-nav">{% if prevurl %}<div class="project-nav__prev"><a href="{{prevurl}}">&larr; Previous project</a></div>{% endif %}{% if nexturl %}<div class="project-nav__next"><a href="{{nexturl}}">Next project &rarr;</a></div>{% endif %}</div>
   <header>
     <h1 class="content__title">{{ page.title }}</h1>
   </header>

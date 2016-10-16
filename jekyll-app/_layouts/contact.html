@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {% include head.html %}
 
   <body>
@@ -11,9 +10,7 @@
         {% if page.url == '/contact/' or page.url == '/blog/' or page.url == '/projects/' %}<h1 class="page-title--x-large">{{ page.title }}</h1>{% endif %}
         {{ content }}
       </main>
-
-
     </div>
+    <script src="{{ site.baseurl }}/assets/js/contactform.js"></script>
   </body>
-  <script src="{{ site.baseurl }}/assets/js/contactform.js"></script>
 </html>

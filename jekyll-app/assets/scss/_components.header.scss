@@ -31,9 +31,8 @@
 
 .page-title {
   display: inline-block;
-  font-family: "Work Sans", Tahoma, "Dejavu Sans", Arial, sans-serif;
+  font-family: "work_sanssemibold", Tahoma, "Dejavu Sans", Arial, sans-serif;
   font-size: 2rem;
-  font-weight: 700;
   letter-spacing: 0.03125rem;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -55,7 +54,7 @@
 }
 
 .page-title--thin {
-  font-weight: 300;
+  font-family: "work_sanslight", Tahoma, "Dejavu Sans", Arial, sans-serif;
 }
 
 .page-title__sub-title {
@@ -71,9 +70,9 @@
 
   @include breakpoint(large) {
     display: block;
-    font-family: "Work Sans", Tahoma, "Dejavu Sans", Arial, sans-serif;
+    font-family: "work_sanssemibold", Tahoma, "Dejavu Sans", Arial, sans-serif;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.03125rem;
     margin-bottom: 2rem;
     text-transform: uppercase;

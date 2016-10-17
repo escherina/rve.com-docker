@@ -1,10 +1,7 @@
 ---
-title: "Awesome project 3"
-date: 2016-01-15
-var: test
+title: "Portfolio site - Wilco van Esch"
+date: 2016-09-15
 feature_image: projects/placeholder3.png
 feature_desc: "Placeholder 3"
 ---
 blergy blergy blerg
-
-{{ page.var }}

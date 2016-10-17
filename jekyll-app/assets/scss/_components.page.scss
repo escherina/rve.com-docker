@@ -12,7 +12,7 @@
 
 main {
   @include breakpoint(large) {
-    margin-left: calc(14rem + 4px);
+    margin-left: calc(12rem + 4px);
     padding: 4rem 0 0 2rem;
   }
 }

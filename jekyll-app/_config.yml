@@ -21,13 +21,13 @@ gems:
   - jekyll-paginate
 
 paginate: 5
-paginate_path: "/blog/page:num/"
+paginate_path: "/articles/page:num/"
 
 # Build settings
 markdown: redcarpet
 source: ./jekyll-app
 destination: ./build
-permalink: /blog/:year/:month/:day/:title/
+permalink: /articles/:year/:month/:day/:title/
 exclude: ["node_modules"]
 
 collections:
@@ -37,7 +37,7 @@ collections:
 
 sitemap:
   include_posts:
-    - "/blog/index.html"
+    - "/articles/index.html"
 
 # Default settings
 defaults:

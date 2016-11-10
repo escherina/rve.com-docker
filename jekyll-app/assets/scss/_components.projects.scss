@@ -1,3 +1,9 @@
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .project-nav {
   height: 1.5rem;
   margin-bottom: 1rem;
@@ -68,71 +74,5 @@
 
   @include breakpoint(medium) {
     @include project-image(320px, 510px);
-  }
-}
-
-.grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.grid-item {
-  border: 1px solid $color-gray-medium;
-  margin-bottom: 1.25rem;
-  overflow: hidden;
-  padding: 0.5rem;
-  position: relative;
-  text-align: center;
-  width: 100%;
-
-  @include breakpoint(medium) {
-    width: 48.5%;
-  }
-
-  &:hover {
-    img {
-      opacity: 0.4;
-    }
-
-    .grid-item__caption::after {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-  }
-
-  a,
-  a:hover {
-    text-decoration: none;
-  }
-
-  img {
-    transition: opacity 0.5s;
-  }
-}
-
-.grid-item__caption {
-  background-color: transparent;
-  border-top: 4px solid #ccc;
-  line-height: 1;
-  padding-bottom: 0;
-  padding-top: 0.5rem;
-  position: relative;
-  width: 100%;
-  z-index: 10;
-
-  &::after {
-    background-color: $color-brand;
-    content: '';
-    display: block;
-    height: 4px;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: -4px;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.5s, opacity 0.5s;
-    width: 100%;
-    z-index: 20;
   }
 }

@@ -19,13 +19,23 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
         * This is indented four spaces, because it's two spaces further than the item above.
         * You might want to consider making a new list.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
+<table>
+  <tr>
+    <th>Tables</th>
+    <th>Are</th>
+    <th>Cool</th>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>test</td>
+    <td>test</td>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>test</td>
+    <td>test</td>
+  </tr>
+</table>
 
 > This is a blockquote aww yeah and it is pretty decent.
 >
@@ -33,7 +43,7 @@ On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, partici
 
 ------
 
-This is some text not written in HTML but in another language!
+`This is some text not written in HTML but in another language!`
 
 This is <del>struckthrough text</del>.
 

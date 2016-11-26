@@ -25,7 +25,7 @@ order: 4
   </defs>
 </svg>
 
-Find me on <a href="https://uk.linkedin.com/in/rhianvanesch" aria-label="Find me on Linked In"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a>, <a href="https://github.com/escherina" aria-label="My Stack Overflow account"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-github"></use></svg> Github</a> and <a href="http://twitter.com/rhianvanesch" aria-label="Follow me on Twitter"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
+Find me on <a href="https://uk.linkedin.com/in/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a>, <a href="https://github.com/escherina"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-github"></use></svg> Github</a> and <a href="http://twitter.com/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
 
 <div class="contact-form">
   <h2>Email me</h2>

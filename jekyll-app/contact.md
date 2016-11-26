@@ -1,6 +1,5 @@
 ---
 title: Contact
-layout: contact
 order: 4
 ---
 

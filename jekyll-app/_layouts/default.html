@@ -13,7 +13,9 @@
 
     </div>
   </body>
-
+  {% if page.url == '/contact/' %}
+    <script src="{{ site.baseurl }}/assets/js/contactform.js"></script>
+  {% endif %}
   <script>
     var font = new FontFaceObserver('Open Sans');
 

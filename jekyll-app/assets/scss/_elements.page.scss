@@ -1,7 +1,7 @@
 html {
   background-image: radial-gradient(ellipse at top left, $color-gray-light2, $color-white);
   color: $color-text;
-  font-family: "karla-regular", "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: ($base-font-size / 16px) * 1em;
   line-height: $base-line-height / $base-font-size;
   min-height: 100%;
@@ -29,5 +29,9 @@ html {
 hr {
   background: $color-gray-medium;
   border: 0;
-  height: 1pt; // 1px height reveals a bug: the 2nd hr is thicker?!
+  height: 1pt;
+}
+
+.fonts-loaded {
+  font-family: "Open Sans", sans-serif;
 }

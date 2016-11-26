@@ -13,4 +13,14 @@
 
     </div>
   </body>
+
+  <script>
+    var font = new FontFaceObserver('Open Sans');
+
+    font.load().then(function () {
+      document.documentElement.className += " fonts-loaded";
+    }, function () {
+      console.error('Font is not available');
+    });
+  </script>
 </html>

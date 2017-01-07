@@ -3,14 +3,25 @@ title: "De Tijgertjes daycare website"
 date: 2016-10-15
 feature_image: projects/de-tijgertjes/de-tijgertjes_large.png
 feature_desc: "De Tijgertjes daycare - large screen view"
+project_tags:
+  - Wordpress
+  - Illustrator
+  - SVG
+  - HTML5
+  - JavaScript
+  - CSS
+  - Sass
+  - gulp
+  - responsive design
 ---
+
 ### The Brief
 Redesign a Dutch daycare website with a modern look and feel. Retain key brand elements (logo, colour scheme) but make the site more professional and welcoming. Build the site responsively, and restructure the content in the process.
 
 ### Content
 Since there was a lot of redundant content and a confusing navigation structure in the original site, I did a complete content inventory and ran through it with the client to create a new structure. This let me see what clearly needed to be in the main navigation menu, and what could be hidden in a sub-menu. Overall, we simplified the site and combined many small pages, or removed them where they added no value to users.
 
-I felt that only having a lengthy welcome message as the focal point of the home page was a little outdated and unhelpful for users, especially as many of them are likely to be busy parents. I looked at competitors in the same field to see what information they prioritised on their home pages. The client and I decided to focus on the daycare's location, a means of contact, and the menu, though we included a more concise welcome message further down the page. On the previous site, the contact form had only been linked to in page content, so we put it on the main menu to make it easier to find.
+I felt that having a lengthy welcome message as the focal point of the home page was a little outdated and unhelpful for users, especially as many of them are likely to be busy parents. I looked at competitors in the same field to see what information they prioritised on their home pages and came up with a list of suggestions. The client and I decided to focus on the daycare's location, a means of contact, and the menu, though we included a more concise welcome message further down the page. On the previous site, the contact form had only been linked to in page content, so we put it on the main menu to make it easier to find.
 
 #### Contact form
 

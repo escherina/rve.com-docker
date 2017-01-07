@@ -3,6 +3,13 @@ title: "Wedding website"
 date: 2016-01-14
 feature_image: projects/wedsite/wedding-site_large.jpg
 feature_desc: "Wedding website - large screen view"
+project_tags:
+  - Wordpress
+  - HTML5
+  - CSS
+  - Photoshop
+  - photography
+  - responsive design
 ---
 ### The Brief
 

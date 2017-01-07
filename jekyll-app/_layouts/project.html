@@ -22,6 +22,18 @@ layout: default
     <h2>{{ page.title }}</h2>
   </header>
 
+  {% if page.project_tags %}
+  <p class="project__tags">Skills used:
+    {% for tag in page.project_tags %}
+      {% if forloop.last %}
+        {{ tag }}.
+      {% else %}
+        {{ tag }},
+      {% endif %}
+    {% endfor %}
+  </p>
+  {% endif %}
+
   {% if page.feature_image %}
   <figure class="project__img project__img--lg">
     {% picture {{ page.feature_image }} alt="{{ page.feature_desc }}" %}

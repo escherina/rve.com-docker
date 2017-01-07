@@ -3,6 +3,17 @@ title: "Portfolio site - Wilco van Esch"
 date: 2016-09-15
 feature_image: projects/placeholder3.png
 feature_desc: "Portfolio site - large screen view"
+project_tags:
+  - Jekyll
+  - Liquid templating
+  - gulp
+  - Docker
+  - HTML5
+  - JavaScript
+  - CSS
+  - Sass
+  - responsive design
+  - photography
 ---
 
 ### The Brief

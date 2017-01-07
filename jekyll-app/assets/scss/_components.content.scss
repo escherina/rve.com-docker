@@ -1,12 +1,11 @@
 .content {
   background-color: #fcfcfc;
   border: 0;
-  border-left: 4px solid $color-gray-medium-light;
   margin-bottom: 2rem;
+  padding: 1rem;
 
-  &:hover {
-    background-color: #e9e9e9;
-    border-color: $color-brand;
+  @include breakpoint(medium) {
+    padding: 1.5rem;
   }
 
   &--grid {
@@ -16,6 +15,10 @@
     position: relative;
     text-align: center;
     width: 100%;
+
+    &:hover {
+      background-color: #e9e9e9;
+    }
 
     @include breakpoint(medium) {
       width: 48.5%;
@@ -27,36 +30,14 @@
     padding: 0.5rem 0 0 0;
     font-size: 1rem;
   }
-}
 
-.content__title {
-  margin-bottom: 0.5rem;
-  padding: 0;
-  border: 0;
+  &__contact {
+    padding: 1.5rem;
+  }
 }
 
 .content__date {
-  display: block;
-  margin-bottom: 0.5rem;
-}
 
-.content__link {
-  color: $color-text;
-  display: block;
-  padding: 1rem;
-
-  @include breakpoint(medium) {
-    padding: 1.5rem;
-  }
-
-  &:hover, &:active {
-    color: $color-text;
-    text-decoration: none;
-
-    .content__readmore {
-      text-decoration: underline;
-    }
-  }
 }
 
 .content__readmore {

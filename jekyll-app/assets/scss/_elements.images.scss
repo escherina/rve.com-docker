@@ -6,11 +6,4 @@ img {
 figure {
   border: 1px solid $color-gray-medium;
   display: table;
-  padding: ($base-spacing-unit / 2);
-}
-
-figcaption {
-  @include font-size(14px, 1);
-  background-color: $color-gray-light;
-  padding: ($base-spacing-unit / 4);
 }

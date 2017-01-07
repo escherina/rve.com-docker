@@ -24,31 +24,34 @@ order: 4
   </defs>
 </svg>
 
+<h2>Social media</h2>
+
 Find me on <a href="https://uk.linkedin.com/in/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a>, <a href="https://github.com/escherina"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-github"></use></svg> Github</a> and <a href="http://twitter.com/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
 
-<div class="contact-form">
-  <h2>Email me</h2>
 
-  <form id="form" action="https://formspree.io/rhian.vanesch@gmail.com" method="post">
-    <input type="hidden" name="_next" value="/thankyou" />
-    <input type="text" name="_gotcha" style="display:none" />
-    <p>
-      <label for="name">Name</label>
-      <input class="form_field" type="text" name="name" id="name" required></input>
-    </p>
-    <p>
-      <label for="email">Email</label>
-      <input class="form_field" type="email" name="_replyto" id="email" required></input>
-    </p>
-    <p>
-      <label for="message">Message</label>
-      <textarea class="form_field" name="message" id="message" required></textarea>
-    </p>
-    <p>
-      <button type="submit">Send email</button>
-    </p>
-  </form>
+<h2>Email me</h2>
 
+<div class="content content__contact">
+<form id="form" action="https://formspree.io/rhian.vanesch@gmail.com" method="post">
+  <input type="hidden" name="_next" value="/thankyou" />
+  <input type="text" name="_gotcha" style="display:none" />
+  <p>
+    <label for="name">Name</label>
+    <input class="form_field" type="text" name="name" id="name" required></input>
+  </p>
+  <p>
+    <label for="email">Email</label>
+    <input class="form_field" type="email" name="_replyto" id="email" required></input>
+  </p>
+  <p>
+    <label for="message">Message</label>
+    <textarea class="form_field" name="message" id="message" required></textarea>
+  </p>
+  <p>
+    <button type="submit">Send email</button>
+  </p>
+</form>
 </div>
-<div class="contact-form__success" aria-hidden="true">Thank you, your message has been sent! <a class="contact-form__close">CLOSE</a></div>
-<div class="contact-form__fail" aria-hidden="true">Sorry, there was a problem sending your message. <a class="contact-form__close">CLOSE</a></div>
+
+<div class="message message__success" aria-hidden="true">Thank you, your message has been sent! <a class="message__close">CLOSE</a></div>
+<div class="message message__failure" aria-hidden="true">Sorry, there was a problem sending your message. <a class="message__close">CLOSE</a></div>

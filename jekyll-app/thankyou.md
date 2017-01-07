@@ -27,7 +27,7 @@ exclude: true
 
 Find me on <a href="https://uk.linkedin.com/in/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a>, <a href="https://github.com/escherina"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-github"></use></svg> Github</a> and <a href="http://twitter.com/rhianvanesch"><svg aria-hidden="true" class="icon-social"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
 
-<div class="contact-form__thankyou">
+<div class="message__thankyou">
   Thank you, your message has been successfully sent.
 
   <a class="blog-excerpt__readmore" href="/contact">Go back to the contact form &rarr;</a>

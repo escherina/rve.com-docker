@@ -1,53 +1,47 @@
-.contact-form {
-  background-color: #fcfcfc;
-  border-left: 4px solid $color-gray-medium-light;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+label {
+  display: block;
+}
 
-  label {
+input, textarea {
+  border: 1px solid $color-gray-medium-light;
+  border-bottom: 4px solid $color-gray-medium-light;
+  padding: 4px;
+
+    &:focus {
+      border-color: $color-brand;
+      outline: 0;
+    }
+}
+
+textarea {
+  height: 8rem;
+}
+
+.message {
+  display: none;
+  padding: 1.5rem;
+  visibility: hidden;
+  border-left: 4px solid;
+
+  &__success {
+    background-color: #DBF5E3;
+    border-color: #329E44
+  }
+
+  &__failure {
+    background-color: #FFDBDB;
+    border-color: #BE1212;
+  }
+
+  &__thankyou {
+    background-color: #DBF5E3;
+    border-color: #329E44;
     display: block;
-  }
-
-  input, textarea {
-    border: 1px solid $color-gray-medium-light;
-    border-bottom: 4px solid $color-gray-medium-light;
-    padding: 4px;
-
-      &:focus {
-        border-color: $color-brand;
-        outline: 0;
-      }
-  }
-
-  textarea {
-    height: 8rem;
+    visibility: visible;
   }
 }
 
-.contact-form__success {
-  background-color: #DBF5E3;
-  border-left: 4px solid #329E44;
-  display: none;
-  padding: 1.5rem;
-  visibility: hidden;
-}
-
-.contact-form__fail {
-  background-color: #FFDBDB;
-  border-left: 4px solid #BE1212;
-  display: none;
-  padding: 1.5rem;
-  visibility: hidden;
-}
-
-.contact-form__thankyou {
-  background-color: #DBF5E3;
-  border-left: 4px solid #329E44;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.contact-form__close {
+.message__close {
   cursor: pointer;
   float: right;
   font-size: 1.25rem;

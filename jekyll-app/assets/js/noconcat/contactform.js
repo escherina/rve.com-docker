@@ -1,8 +1,8 @@
 var form = document.forms[0];
 var fields = form.getElementsByClassName("form_field");
-var successMessage = document.getElementsByClassName("contact-form__success")[0];
-var failMessage = document.getElementsByClassName("contact-form__fail")[0];
-var closeAction = document.getElementsByClassName("contact-form__close")[0];
+var successMessage = document.getElementsByClassName("message__success")[0];
+var failMessage = document.getElementsByClassName("message__failure")[0];
+var closeAction = document.getElementsByClassName("message__close")[0];
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();

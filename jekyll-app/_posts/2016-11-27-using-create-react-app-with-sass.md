@@ -1,5 +1,5 @@
 ---
-title: "Create React App with Sass and concurrently"
+title: "Using Create React App with Sass"
 date: 2016-11-27
 ---
 

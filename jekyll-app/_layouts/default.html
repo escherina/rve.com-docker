@@ -7,7 +7,7 @@
       {% include header.html %}
 
       <main role="main">
-        {% if page.url == '/contact/' or page.url == '/blog/' or page.url == '/projects/' %}<h1 class="page-title--x-large">{{ page.title }}</h1>{% endif %}
+        {% if page.url == '/contact/' or page.url == '/articles/' or page.url == '/projects/' %}<h2 class="page-title--x-large">{{ page.title }}</h2>{% endif %}
         {{ content }}
       </main>
 

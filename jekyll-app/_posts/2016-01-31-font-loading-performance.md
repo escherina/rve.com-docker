@@ -2,7 +2,7 @@
 title: "Font loading performance: a comparison"
 date: 2016-01-31
 ---
-## Option 1: Base64 encoding and embedding into css file
+### Option 1: Base64 encoding and embedding into css file
 **Pros:**
 <ul class="list-nomargin">
   <li>No flash of invisible text</li>
@@ -17,7 +17,7 @@ date: 2016-01-31
   <li>Should probably be loaded separately, even asynchronously, from the main
   stylesheet. More pain than it's worth for a small portfolio site.</li>
 </ul>
-## Option 2: Pure Google fonts
+### Option 2: Pure Google fonts
 **Pros:**
 <ul class="list-nomargin">
   <li>Fast</li>
@@ -27,7 +27,7 @@ date: 2016-01-31
   <li>Flash of unstyled text on body font, even on fast connections (though not
     on the title font, which is the first thing on the page. Not sure why.)</li>
 </ul>
-## Option 3: Subsetting Google fonts
+### Option 3: Subsetting Google fonts
 **Pros:**
 <ul class="list-nomargin">
   <li>Faster than loading the full font</li>
@@ -39,7 +39,7 @@ date: 2016-01-31
   <li>Anyone using Google Translate on the webpage may end up with a
   weird-looking mix of fonts on the title</li>
 </ul>
-## Option 4: Self-hosting font files
+### Option 4: Self-hosting font files
 **Pros:**
 <ul class="list-nomargin">
   <li>No flash of unstyled text</li>

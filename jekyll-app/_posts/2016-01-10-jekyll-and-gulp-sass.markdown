@@ -4,9 +4,9 @@ date:   2016-01-10 13:20:00 +0000
 ---
 Jekyll has its own built-in Sass processor, which works fine. But what if you want to use [gulp-sass](https://www.npmjs.com/package/gulp-sass) or an equivalent, instead?
 
-## How Jekyll handles Sass
+### How Jekyll handles Sass
 
-### Default behaviour:
+#### Default behaviour:
 Out of the box, Jekyll has partial Sass files into `/_scss` and, on build, will compile them into one css file in the location of `main.scss` file (by default this is `/css`). This what you'll get with a fresh install of Jekyll:
 
 {% highlight text %}
@@ -36,7 +36,7 @@ feed.xml
 index.html
 {% endhighlight %}
 
-### Changing directory structure
+#### Changing directory structure
 For Jekyll to be able to correctly compile the partial and main scss files, `main.scss` has to start with two sets of triple dashed lines:
 
 {% highlight YAML %}

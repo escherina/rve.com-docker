@@ -33,8 +33,8 @@ button {
   padding: ($base-spacing-unit / 4) ($base-spacing-unit / 2);
 
   &:hover {
-    background-color: $color-brand-highlight;
-    border-color: $color-brand-highlight;
+    background-color: $color-link-highlight;
+    border-color: $color-link-highlight;
   }
 
   &:disabled {

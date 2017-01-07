@@ -45,7 +45,6 @@
 
 .page-nav__list-link {
   background-color: $color-white;
-  color: $color-brand;
   display: block;
   padding: 0.625rem;
   position: relative;
@@ -62,7 +61,7 @@
   }
 
   &::before {
-    background-color: $color-brand;
+    background-color: $color-link;
     content: '';
     display: block;
     height: 4px;
@@ -80,7 +79,6 @@
     }
 
     @include breakpoint(large) {
-      background-color: $color-brand;
       height: 100%;
       left: auto;
       right: 0;
@@ -109,43 +107,20 @@
 }
 
 .page-nav__list-item--active {
-  @include breakpoint(large) {
-    border-right: 4px solid $color-brand;
-    padding-right: calc(2rem - 4px);
 
-    &:hover {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
+  @include breakpoint(large) {
+    border-bottom: 0;
+    border-right: 4px solid $color-link;
+    padding-right: calc(2rem - 4px);
   }
 
   &::before {
-    background-color: $color-brand;
-    content: '';
-    display: block;
-    height: 4px;
-    left: 0;
     opacity: 1;
-    position: absolute;
-    top: 0;
-    transform: scale3d(1, 1, 1);
-    width: 100%;
-
-    @include breakpoint(small) {
-      bottom: 0;
-      top: auto;
-    }
+    transform: none;
 
     @include breakpoint(large) {
-      background-color: $color-brand;
-      height: 100%;
-      left: auto;
-      opacity: 0;
-      right: 0;
-      top: 0;
       transform: translate3d(100%, 0, 0);
-      width: 100%;
-      z-index: -1;
     }
   }
+
 }

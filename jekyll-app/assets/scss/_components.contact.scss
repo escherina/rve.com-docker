@@ -3,12 +3,12 @@ label {
 }
 
 input, textarea {
-  border: 1px solid $color-gray-medium-light;
-  border-bottom: 4px solid $color-gray-medium-light;
+  border: 1px solid $color-gray-medium;
+  border-bottom: 4px solid $color-gray-medium;
   padding: 4px;
 
     &:focus {
-      border-color: $color-brand;
+      border-color: $color-link;
       outline: 0;
     }
 }
@@ -24,18 +24,18 @@ textarea {
   border-left: 4px solid;
 
   &__success {
-    background-color: #DBF5E3;
-    border-color: #329E44
+    background-color: $color-success-bg;
+    border-color: $color-success;
   }
 
   &__failure {
-    background-color: #FFDBDB;
-    border-color: #BE1212;
+    background-color: $color-failure-bg;
+    border-color: $color-failure;
   }
 
   &__thankyou {
-    background-color: #DBF5E3;
-    border-color: #329E44;
+    background-color: $color-success-bg;
+    border-color: $color-success;
     display: block;
     visibility: visible;
   }
@@ -56,6 +56,6 @@ textarea {
   margin-right: 1rem;
 
   &:hover {
-    color: $color-brand-highlight;
+    color: $color-link-highlight;
   }
 }

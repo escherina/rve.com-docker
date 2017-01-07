@@ -4,6 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title != 'Home' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="preload" as="font" href="{{ "/assets/fonts/opensans-regular-webfont.woff2" | prepend: site.url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "/assets/fonts/opensans-regular-webfont.woff" | prepend: site.url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-semibold-webfont.woff2" | prepend: site.url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-semibold-webfont.woff" | prepend: site.url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-light-webfont.woff2" | prepend: site.url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-light-webfont.woff" | prepend: site.url }}" type="font/woff2" crossorigin>
+
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}" type="image/gif">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">

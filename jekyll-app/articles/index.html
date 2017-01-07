@@ -6,12 +6,10 @@ order: 3
 
   {% for post in paginator.posts %}
   <article class="content">
-    <a class="content__link" href="{{ post.url | prepend: site.baseurl }}"><h2 class="content__title">
-      {{ post.title }}
-    </h2>
-    <span class="content__date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    {{ post.content | strip_html | truncatewords: 20 }}
-    <span class="content__readmore">Read the full post &rarr;</span></a>
+    <h2>{{ post.title }}</h2>
+    <p class="content__date">{{ post.date | date: "%b %-d, %Y" }}</p>
+    {{ post.excerpt }}
+    <a class="content__readmore" href="{{ post.url | prepend: site.baseurl }}">Read the full post &rarr;</a>
   </article>
   {% endfor %}
 

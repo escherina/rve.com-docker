@@ -8,7 +8,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
   var formData = new FormData(form);
   var request = new XMLHttpRequest();
-  request.open('POST', 'http://formspree.io/rhian.vanesch@gmail.com', true);
+  request.open('POST', 'https://formspree.io/rhian.vanesch@gmail.com', true);
   request.setRequestHeader('Accept', 'application/json');
 	request.onreadystatechange = function() {
 	  if (request.readyState === 4) {

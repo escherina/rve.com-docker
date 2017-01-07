@@ -30,6 +30,8 @@ destination: ./build
 permalink: /articles/:year/:month/:day/:title/
 exclude: ["node_modules"]
 
+excerpt_separator: <!--more-->
+
 collections:
   projects:
     output: true

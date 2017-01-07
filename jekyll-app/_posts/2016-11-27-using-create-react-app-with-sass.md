@@ -9,6 +9,8 @@ date: 2016-11-27
 
 However... no build configuration means *no build configuration*, so unless you want to eject out early, how do you add in things like Sass? For some of us, CSS compilers are an important part of our development process. I found some discussion about optional Sass support (see [this GitHub issue thread](https://github.com/facebookincubator/create-react-app/issues/78)) and some good ideas of how to add it in yourself. I based this solution on some of the ideas in the thread.
 
+<!--more-->
+
 #### Caveats and requirements
 
 - I'm on a Windows machine

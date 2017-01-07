@@ -11,10 +11,18 @@
   &--grid {
     margin-bottom: 1.25rem;
     overflow: hidden;
-    padding: 0.5rem;
+    padding: 1rem;
     position: relative;
     text-align: center;
     width: 100%;
+
+    a {
+      display: block;
+    }
+
+    img {
+      border: 1px solid $color-gray-medium;
+    }
 
     &:hover {
       background-color: $content-bg-hover;
@@ -23,12 +31,6 @@
     @include breakpoint(medium) {
       width: 48.5%;
     }
-  }
-
-  &__caption {
-    background-color: transparent;
-    padding: 0.5rem 0 0 0;
-    font-size: 1rem;
   }
 
   &__contact {

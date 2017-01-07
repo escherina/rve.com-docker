@@ -3,9 +3,11 @@ layout: default
 ---
 <article>
 
+{% if page.url != '/contact/' %}
   <header>
-    <h1>{{ page.title }}</h1>
+    <h2>{{ page.title }}</h2>
   </header>
+{% endif %}
 
   {{ content }}
 

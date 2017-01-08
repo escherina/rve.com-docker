@@ -5,13 +5,8 @@
 			@content;
 		}
   } @else {
-		@warn "Couldn't find a your breakpoint named `#{$name}`.";
+		@warn "Couldn't find a breakpoint named `#{$name}`.";
 	}
-}
-
-@mixin project-image($image-width, $image-height) {
-  max-width: calc(#{$image-width} + 2px);
-  max-height: calc(#{$image-height} + 2px);
 }
 
 @mixin font-size($font-size, $line-height: auto) {
@@ -23,7 +18,7 @@
     @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
       line-height: $line-height;
     } @elseif ($line-height != none and $line-height != false) { // if we haven't set line-height properly
-      @warn "D'oh! '#{$line-height}' is not a valid value for `line-height`."
+      @warn "'#{$line-height}' is not a valid value for `line-height`."
     }
   }
 }

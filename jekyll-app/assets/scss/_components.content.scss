@@ -13,20 +13,32 @@
   // Image grid rules: used on projects page
   &--grid {
     margin-bottom: 1.25rem;
-    overflow: hidden;
     padding: 1rem;
-    position: relative;
-    text-align: center;
     width: 100%;
     box-shadow: 0 5px 35px -10px rgba(200, 200, 200, .5);
+
+    picture {
+      display: block;
+      position: relative;
+      height: 0;
+      width: 100%;
+      padding-top: 75.83%;
+      background: #f0f0f0;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $color-gray-medium;
+    }
 
     a {
       display: block;
     }
 
-    img {
-      border: 1px solid $color-gray-medium;
-    }
 
     &:hover {
       background-color: $content-bg-hover;

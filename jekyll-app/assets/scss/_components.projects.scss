@@ -28,50 +28,54 @@
 }
 
 .project__img {
-  display: block;
   margin: 0 auto $base-spacing-unit;
+
+  picture {
+    display: block;
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-top: 100%;
+    background: #f0f0f0;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .project__img--lg {
-  @include project-image(300px, 227px);
+  width: 100%;
 
-  @include breakpoint(med-and-below) {
-    @include project-image(620px, 470px);
-  }
-
-  @include breakpoint(xl-and-below) {
-    @include project-image(800px, 606px);
-  }
-
-  @include breakpoint(x-large) {
-    @include project-image(800px, 606px);
+  picture {
+    padding-top: 75.75%;
   }
 }
 
 .project__img--med {
-  @include project-image(300px, 400px);
+  width: 80%;
 
-  @include breakpoint(med-and-below) {
-    @include project-image(410px, 547px);
-    }
-
-  @include breakpoint(xl-and-below) {
-    @include project-image(520px, 693px);
+  @include breakpoint(medium) {
+    width: 66%;
   }
 
-  @include breakpoint(x-large) {
-    @include project-image(520px, 693px);
+  picture {
+    padding-top: 133.33%;
   }
 }
 
 .project__img--sm {
-  @include project-image(300px, 478px);
+  width: 75%;
 
-  @include breakpoint(med-and-below) {
-    @include project-image(320px, 510px);
+  @include breakpoint(small) {
+    width: 50%;
   }
 
-  @include breakpoint(medium) {
-    @include project-image(320px, 510px);
+  picture {
+    padding-top: 159.06%;
   }
 }

@@ -31,7 +31,7 @@ Find me on <a href="https://uk.linkedin.com/in/rhianvanesch"><svg aria-hidden="t
 
 <h2>Email me</h2>
 
-<div class="content content__contact">
+<div class="content">
 <form id="form" action="https://formspree.io/rhian.vanesch@gmail.com" method="post">
   <input type="hidden" name="_next" value="/thankyou" />
   <input type="text" name="_gotcha" style="display:none" />

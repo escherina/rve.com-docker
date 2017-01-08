@@ -5,11 +5,12 @@ order: 3
 ---
 
   {% for post in paginator.posts %}
-  <article class="content">
-    <h2>{{ post.title }}</h2>
-    <p class="content__date">{{ post.date | date: "%b %-d, %Y" }}</p>
-    {{ post.excerpt }}
-    <a class="content__readmore" href="{{ post.url | prepend: site.baseurl }}">Read the full post &rarr;</a>
+  <article class="content content--list">
+    <div class="content__date">
+      <span>{{ post.date | date: "%d %b" }}</span>
+      <span>{{ post.date | date: "%Y" }}</span>
+    </div>
+    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="content__title">{{ post.title }}</h2></a>
   </article>
   {% endfor %}
 

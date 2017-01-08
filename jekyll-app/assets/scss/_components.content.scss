@@ -1,13 +1,16 @@
 .content {
   background-color: $content-bg;
   border: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 1rem;
+  box-shadow: 0 5px 35px -10px rgba(200, 200, 200, .2);
 
   @include breakpoint(medium) {
     padding: 1.5rem;
+    margin-bottom: 2rem;
   }
 
+  // Image grid rules: used on projects page
   &--grid {
     margin-bottom: 1.25rem;
     overflow: hidden;
@@ -15,6 +18,7 @@
     position: relative;
     text-align: center;
     width: 100%;
+    box-shadow: 0 5px 35px -10px rgba(200, 200, 200, .5);
 
     a {
       display: block;
@@ -33,14 +37,58 @@
     }
   }
 
-  &__contact {
-    padding: 1.5rem;
+  // List view, used on articles page
+  &--list {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    box-shadow: 0 5px 35px -10px rgba(200, 200, 200, .2);
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(small) {
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint(large) {
+      padding: 1rem;
+    }
+
+    a {
+      flex-grow: 1;
+    }
   }
 }
 
-.content__readmore {
-  display: block;
-  font-weight: bold;
-  margin-top: 1rem;
-  text-align: right;
+.content__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0.5rem;
+  border-right: 1px solid $color-gray-medium;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+  flex-basis: 3.5rem;
+  flex-shrink: 0;
+
+  @include breakpoint(large) {
+    flex-basis: 4rem;
+    font-size: 0.875rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.content__title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+
+  @include breakpoint(medium) {
+    font-size: 1.25rem;
+  }
+
+  @include breakpoint(large) {
+    font-size: 1.375rem;
+  }
 }

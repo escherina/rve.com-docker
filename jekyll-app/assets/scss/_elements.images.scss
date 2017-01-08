@@ -7,3 +7,8 @@ figure {
   border: 1px solid $color-gray-medium;
   display: table;
 }
+
+figcaption {
+  text-align: center;
+  padding: 0 0.25rem;
+}

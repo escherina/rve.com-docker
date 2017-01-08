@@ -21,14 +21,6 @@ summary {
   display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
 a {
   background-color: transparent;
 }
@@ -38,18 +30,7 @@ a:hover {
   outline: 0;
 }
 
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-code,
-kbd,
-samp {
+code {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -74,8 +55,6 @@ pre {
 
 button,
 input,
-optgroup,
-select,
 textarea {
   color: inherit;
   font: inherit;
@@ -84,10 +63,6 @@ textarea {
 
 button {
   overflow: visible;
-}
-
-button,
-select {
   text-transform: none;
 }
 

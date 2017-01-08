@@ -17,3 +17,17 @@ font.load().then(function () {
   sessionStorage.fontsLoaded = false;
   console.error('Font is not available');
 });
+
+var title = new FontFaceObserver('work_sanssemibold');
+var titlethin = new FontFaceObserver('work_sanslight');
+
+Promise.all([
+  title.load(),
+  titlethin.load()
+]).then(function () {
+  document.documentElement.classList.add('title-font-loaded');
+  sessionStorage.titleFontsLoaded = true;
+}).catch(function () {
+  sessionStorage.titleFontsLoaded = false;
+  console.error('Font is not available');
+});

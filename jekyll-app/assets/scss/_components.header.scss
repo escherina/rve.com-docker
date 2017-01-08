@@ -31,12 +31,16 @@
 
 .page-title {
   display: inline-block;
-  font-family: "work_sanssemibold", Tahoma, "Dejavu Sans", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 2rem;
   letter-spacing: 0.03125rem;
   margin-bottom: 0;
   text-transform: uppercase;
   word-spacing: -0.4rem;
+
+  .title-font-loaded & {
+    font-family: "work_sanssemibold", Arial, sans-serif;
+  }
 
   @include breakpoint(small) {
     font-size: 2.5rem;
@@ -54,7 +58,11 @@
 }
 
 .page-title--thin {
-  font-family: "work_sanslight", Tahoma, "Dejavu Sans", Arial, sans-serif;
+  font-family: Arial, sans-serif;
+
+  .title-font-loaded & {
+    font-family: "work_sanslight", Arial, sans-serif;
+  }
 }
 
 .page-title__sub-title {

@@ -14,21 +14,7 @@
     </div>
   </body>
   {% if page.url == '/contact/' %}
-    <script src="{{ site.baseurl }}/assets/js/contactform.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/contactform.js" defer></script>
   {% endif %}
-  <script src="{{ "/assets/js/scripts.js" | prepend: site.url }}"></script>
-  <script>
-    var font = new FontFaceObserver('Open Sans');
-
-    font.load().then(function () {
-      sessionStorage.fontsLoaded = true;
-    }).catch(function () {
-      sessionStorage.fontsLoaded = false;
-      console.error('Font is not available');
-    });
-
-    if (sessionStorage.fontsLoaded) {
-      document.documentElement.classList.add('fonts-loaded');
-    }
-  </script>
+  <script src="{{ "/assets/js/scripts.js" | prepend: site.url }}" defer></script>
 </html>

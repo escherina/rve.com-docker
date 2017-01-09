@@ -149,12 +149,7 @@ module.exports = {
     },
     images: {
       src: developmentAssets + '/images/**/**/*.{jpg,jpeg,png,gif}',
-      dest: productionAssets + '/images/',
-      options: {
-        optimizationLevel: 3,
-        progressive: true,
-        interlaced: true
-      }
+      dest: productionAssets + '/images/'
     }
   },
   revision: {

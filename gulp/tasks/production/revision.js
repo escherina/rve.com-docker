@@ -1,6 +1,5 @@
 var gulp    = require('gulp');
 var rev     = require('gulp-rev');
-var fs      = require('fs');
 var through = require('through2');
 var config = require('../../config').revision;
 

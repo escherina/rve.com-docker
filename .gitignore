@@ -1,2 +1,4 @@
 build
 gulp/secrets.json
+.sass-cache
+node_modules

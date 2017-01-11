@@ -1,9 +1,8 @@
 ---
-title:  "Jekyll tips"
-date:   2016-11-06
+title:  "Writing Liquid tags in code examples on the page"
+date:   2016-12-06S
 curlybracket: "{"
 ---
-### Writing Liquid tags in markdown files
 
 You need to enclose your code in the `{{page.curlybracket}}% raw %}` and `{{page.curlybracket}}% endraw %}` Liquid tags.
 

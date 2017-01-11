@@ -1,6 +1,6 @@
 ---
 title: "Font loading performance: a comparison"
-date: 2016-01-31
+date: 2018-01-31
 ---
 ### Option 1: Base64 encoding and embedding into css file
 **Pros:**

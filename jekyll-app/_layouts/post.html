@@ -5,7 +5,7 @@ layout: default
 
   <header>
     <h2 itemprop="name headline">{{ page.title }}</h2>
-    <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     {% if page.feature_image %}
     <figure><img src="/assets/images/{{ page.feature_image }}"></figure>
     {% endif %}

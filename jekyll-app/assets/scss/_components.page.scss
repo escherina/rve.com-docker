@@ -39,3 +39,9 @@ main {
     margin: 2rem 0;
   }
 }
+
+h2 + time {
+  display: block;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}

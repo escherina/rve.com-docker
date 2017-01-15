@@ -16,12 +16,15 @@ project_tags:
 ---
 
 ### The Brief
-Redesign a Dutch daycare website with a modern look and feel. Retain key brand elements (logo, colour scheme) but make the site more professional and welcoming. Build the site responsively, and restructure the content in the process.
+
+- Redesign a Dutch daycare website with a modern look and feel. 
+- Retain key brand elements (logo, colour scheme) but make the site more professional and welcoming.
+- Build the site responsively, and restructure the content in the process.
 
 ### Content
-Since there was a lot of redundant content and a confusing navigation structure in the original site, I did a complete content inventory and ran through it with the client to create a new structure. This let me see what clearly needed to be in the main navigation menu, and what could be hidden in a sub-menu. Overall, we simplified the site and combined many small pages, or removed them where they added no value to users.
+Since there was a lot of redundant content and a confusing navigation structure in the original site, I did a complete content inventory and ran through it with the client to create a new structure. This let us clearly see what needed to be in the main navigation menu, and what could be hidden in a sub-menu. Overall, we simplified the site and combined many small pages, or removed them where they added no value to users.
 
-I felt that having a lengthy welcome message as the focal point of the home page was a little outdated and unhelpful for users, especially as many of them are likely to be busy parents. I looked at competitors in the same field to see what information they prioritised on their home pages and came up with a list of suggestions. The client and I decided to focus on the daycare's location, a means of contact, and the menu, though we included a more concise welcome message further down the page. On the previous site, the contact form had only been linked to in page content, so we put it on the main menu to make it easier to find.
+I felt that having a lengthy welcome message as the focal point of the home page was a little outdated and unhelpful for users, especially as many of them are likely to be busy parents. I looked at competitors in the same field to see what information they prioritised on their home pages, and came up with a list of suggestions. The client and I decided to focus on the daycare's location, a means of contact, and the menu, though we included a more concise welcome message further down the page. On the previous site, the contact form had only been linked to in page content, so we put it on the main menu to make it easier to find.
 
 #### Contact form
 
@@ -43,7 +46,7 @@ Going from the client's feedback on their previous website design, I used plenty
 ### Menu
 The previous navigation on the site was a link-heavy dropdown menu. I wanted to simplify this, as there didn't seem to be enough content on the site to warrant users (especially mobile users) having to wade through sub-menus.
 
-As part of the content inventory we had already created a much simpler structure, with seven key sections of the site. Only four of those had sub-menus, so I chose to selectively display a secondary menu on the relevant sections. However, I kept the sub-menu semantically correct even though they were displayed slightly separately, so that a screen-reader would jump correctly from an `<li>` to its nested `<ul>` when tabbing through.
+As part of the content inventory we had already created a much simpler structure, with seven key sections of the site. Only four of those had sub-menus, so I chose to selectively display a secondary menu on the relevant sections. However, I kept the sub-menu semantically correct even though it were displayed below its parent, so that a screen-reader would jump correctly from an `<li>` to its nested `<ul>` when tabbing through.
 
 For small screens, I created a simple drop-down with vanilla JavaScript.
 

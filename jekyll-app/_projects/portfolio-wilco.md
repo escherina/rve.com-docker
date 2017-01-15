@@ -104,19 +104,22 @@ The only problem with this method is that IE9-11 and Edge 12 don't allow you to 
 
 ### Performance
 
-11 requests, 116kb
+The home page has a total size of **117 KB** and makes **11** requests. According to [WebPageTest](https://www.webpagetest.org/), it loads in an average of **4.3 seconds** on a Motorola E on a "Slow 3G" connection, and in an average of **0.9 seconds** in Chrome on a "Cable" connection.
 
-11 requests, 242kb size in total
-javascript concat + minified
-gzip & cache expiry set
-images optimised & responsive images used
-scripts async or in footer
-minimal scripts: picturefill and search scripts only
+To achieve this, I did the following:
 
-scripts 8.5 kb
-css 3.9 kb
-images 195.7kb > 70KB
+- Concatenated and minified JavaScript files
+- Minified the CSS file
+- Gzipped assets and defined a Cache-Control policy
+- Optimised images and used responsive images to serve the right size to the user, depending on their device/resolution
+- Scripts are asynchronously loaded, or loaded just before the closing `</body>` tag
+- I used the bare minimum of JavaScript: only [Picturefill](http://scottjehl.github.io/picturefill/) (so the `<picture>` element works on older browsers) and the scripts that enable search functionality
 
-loads in 4.3 seconds motorola E on slow 3G
+The sizes of the main homepage assets:
 
-could improve: FOIT (we're using google fonts)
+- Scripts: **8.9 KB**
+- CSS: **4.9 KB**
+- Images: **69.4 KB**
+- Fonts: **18.4 KB**
+
+Something I might change in a future update is the font loading strategy; at the moment I'm using Google Fonts, but am keen to see if this can be improved.

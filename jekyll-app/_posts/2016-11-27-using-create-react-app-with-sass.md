@@ -80,7 +80,7 @@ package.json
 README.md
 ```
 
-**N.B.** You can name `index.scss` something else, but then you would need to specify the input and output files in your Sass commands as (for example) `main.scss` and `index.css`, rather than just the input and output directories as I've done.
+**N.B.** You can name `index.scss` something else, but then you would need to specify the input and output files in your Sass commands as (for example) `main.scss` and `index.css`, rather than just specifying the input and output directories as I've done.
 
 ### 3. Scripts
 

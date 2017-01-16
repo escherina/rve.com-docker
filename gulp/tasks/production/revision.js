@@ -1,6 +1,7 @@
 var gulp    = require('gulp');
 var rev     = require('gulp-rev');
 var through = require('through2');
+var fs = require('fs');
 var config = require('../../config').revision;
 
 var rmOrig = function () {

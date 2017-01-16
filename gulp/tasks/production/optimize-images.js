@@ -8,7 +8,7 @@ gulp.task('optimize:images', function() {
   return gulp.src(config.src)
     .pipe(imagemin([
       imagemin.gifsicle(),
-      imageminJpegoptim({progressive: true, max: 80}),
+      imageminJpegoptim({progressive: true, max: 85}),
       imagemin.optipng(),
       imagemin.svgo()
     ]))

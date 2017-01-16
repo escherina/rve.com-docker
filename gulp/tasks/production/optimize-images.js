@@ -4,7 +4,7 @@ var imageminJpegoptim = require('imagemin-jpegoptim');
 var size = require('gulp-size');
 var config = require('../../config').optimize.images;
 
-gulp.task('optimise:images', function() {
+gulp.task('optimize:images', function() {
   return gulp.src(config.src)
     .pipe(imagemin([
       imagemin.gifsicle(),

@@ -13,6 +13,7 @@ project_tags:
   - Sass
   - gulp
   - responsive design
+desc: "A case study of a website redesign for a Dutch daycare company."
 ---
 
 ### The Brief

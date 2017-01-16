@@ -10,6 +10,7 @@ project_tags:
   - Photoshop
   - photography
   - responsive design
+desc: "A case study of a responsively-designed wedding website built with Wordpress."
 ---
 ### The Brief
 

@@ -2,6 +2,7 @@
 title: Rhian van Esch
 email: rhian.vanesch@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
+  The portfolio of Rhian van Esch, a front-end developer based in London, UK. Responsive, accessible designs that perform really well.
 baseurl: ""
 url: "http://192.168.0.50:9999"
 twitter_username: escherina

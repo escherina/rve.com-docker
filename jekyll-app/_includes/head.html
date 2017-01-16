@@ -17,7 +17,7 @@
   <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-light-webfont.woff2" | prepend: site.url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ "/assets/fonts/worksans-light-webfont.woff" | prepend: site.url }}" type="font/woff" crossorigin>
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ site.description }}{% endif %}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}" type="image/gif">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

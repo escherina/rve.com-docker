@@ -14,6 +14,7 @@ project_tags:
   - Sass
   - responsive design
   - photography
+desc: "A case study on creating a portfolio website for a tech professional."
 ---
 
 ### The Brief

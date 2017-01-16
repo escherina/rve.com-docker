@@ -1,7 +1,7 @@
 ---
 title: "Portfolio site - Wilco van Esch"
 date: 2016-09-15
-feature_image: projects/wilco-portfolio/wilco-portfolio_large.png
+feature_image: projects/wilco-portfolio/wilco-portfolio_large.jpg
 feature_desc: "Wilco's portfolio site - large screen view"
 project_tags:
   - Jekyll
@@ -43,7 +43,7 @@ To make it stand out a bit more, I added colour and animation to the logo on hov
 It was important that the site be easily readable on mobile devices, so I started the design with a basic idea of how I wanted it to look on desktop (sidebar menu, footer, main content area) and then spend most of my time making sure that would translate well onto smaller screens.
 
 <figure class="project__img project__img--sm">
-  {% picture project-sm projects/wilco-portfolio/wilco-portfolio_small.png alt="Wilco's portfolio site - small screen view" %}
+  {% picture project-sm projects/wilco-portfolio/wilco-portfolio_small.jpg alt="Wilco's portfolio site - small screen view" %}
 </figure>
 
 ### Menu
@@ -99,7 +99,7 @@ I was keen to use SVG icons instead of icon fonts. I used a `<symbol>` element f
 The only problem with this method is that IE9-11 and Edge 12 don't allow you to reference an external file, only the current document, meaning I had to inline the SVG files in each page's html. I initially balked at this - the svg wouldn't be cached and it was adding bloat to every page. On the plus side, I only had six icons to inline, and the pages are pretty lightweight to begin with, so it was an acceptable tradeoff.
 
 <figure class="project__img project__img--med">
-  {% picture project-med projects/wilco-portfolio/wilco-portfolio_medium.png alt="Wilco's portfolio site - medium screen view" %}
+  {% picture project-med projects/wilco-portfolio/wilco-portfolio_medium.jpg alt="Wilco's portfolio site - medium screen view" %}
 </figure>
 
 ### Performance

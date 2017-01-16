@@ -1,7 +1,7 @@
 ---
 title: "De Tijgertjes daycare website"
 date: 2016-10-15
-feature_image: projects/de-tijgertjes/de-tijgertjes_large.png
+feature_image: projects/de-tijgertjes/de-tijgertjes_large.jpg
 feature_desc: "De Tijgertjes daycare - large screen view"
 project_tags:
   - Wordpress
@@ -35,7 +35,7 @@ The original site had a contact form that required users to enter their full add
 When brainstorming the project with the client, a feature that came up was the ability to add and schedule events for the daycare. I added a plugin to allow the client to do this easily, and customised the output to be appropriate for a daycare.
 
 <figure class="project__img project__img--sm">
-  {% picture project-sm projects/de-tijgertjes/de-tijgertjes_small.png alt="De Tijgertjes - small screen view" %}
+  {% picture project-sm projects/de-tijgertjes/de-tijgertjes_small.jpg alt="De Tijgertjes - small screen view" %}
 </figure>
 
 ### Style
@@ -59,7 +59,7 @@ One of the main features of the site would be photos of the daycare centre, so I
 I used Wordpress's built-in responsive images feature for all user-uploaded images.
 
 <figure class="project__img project__img--med">
-  {% picture project-med projects/de-tijgertjes/de-tijgertjes_medium.png alt="De Tijgertjes - medium screen view" %}
+  {% picture project-med projects/de-tijgertjes/de-tijgertjes_medium.jpg alt="De Tijgertjes - medium screen view" %}
 </figure>
 
 ### Performance

@@ -15,7 +15,7 @@ Let's get started!
 Check everything's working properly by running `jekyll serve` from the command line, inside your project folder. You should be able to go to `http://localhost:4000` and see a site that looks like this:
 
 <figure class="project__img project__img--lg">
-  {% picture posts/2017-01-11_jekyll-new-site.png alt="De Tijgertjes - small screen view" %}
+  {% picture posts/2017-01-11_jekyll-new-site.jpg alt="De Tijgertjes - small screen view" %}
 </figure>
 
 ### Making the theme files work for us

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Page not found
+exclude: true
+---
+
+<h2>Sorry, we couldn't find the page you were looking for!</h2>
+
+<p>Try looking through my recent articles and projects instead:</p>
+
+<h4>Recent articles (<a href="/articles">view all articles</a>)</h4>
+<ul class="articlelist">
+{% for post in site.posts limit: 5 %}
+  <li>
+    <span class="articlelist__date">{{ post.date | date: "%d %b %Y" }} |</span> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+<h4>Recent projects (<a href="/projects">view all projects</a>)</h4>
+<ul>
+{% for project in site.projects reversed limit: 5 %}
+  <li>
+    <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+  </li>
+{% endfor %}
+</ul>

@@ -60,7 +60,6 @@ picture:
     default:
       ppi: [1, 2]
       attr:
-        class: blog-full
         itemprop: image
       source_x-lg:
         media: "(min-width: 120rem)"
@@ -77,7 +76,6 @@ picture:
     project-med:
       ppi: [1, 2]
       attr:
-        class: blog-full
         itemprop: image
       source_x-lg:
         media: "(min-width: 120rem)"
@@ -94,7 +92,6 @@ picture:
     project-sm:
       ppi: [1, 2]
       attr:
-        class: blog-full
         itemprop: image
       source_lg:
         media: "(min-width: 40rem)"
@@ -108,7 +105,6 @@ picture:
     grid:
       ppi: [1, 2]
       attr:
-        class: blog-full
         itemprop: image
       source_med:
         media: "(min-width: 40rem)" # anything above 640

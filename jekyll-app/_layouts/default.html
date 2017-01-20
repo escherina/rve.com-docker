@@ -12,8 +12,7 @@
       </main>
       
     </div>
-  </body>
-  {% if page.url == '/contact/' %}
+    {% if page.url == '/contact/' %}
     <script src="{{ site.baseurl }}/assets/js/contactform.js" defer></script>
   {% endif %}
   <script src="{{ "/assets/js/scripts.js" | prepend: site.url }}" defer></script>
@@ -27,4 +26,5 @@
     ga('send', 'pageview');
   </script>
   {% endif %}
+  </body>
 </html>

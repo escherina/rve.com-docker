@@ -39,6 +39,10 @@ textarea {
     display: block;
     visibility: visible;
   }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .message__close {

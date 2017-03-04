@@ -256,7 +256,7 @@ gulp.task('browsersync', () => {
     })
 
   // Watch all these filetypes, and if they change, rebuild Jekyll
-  gulp.watch('**/*', ['jekyll'])
+  gulp.watch('**/*.{html,markdown,md,yml,json,xml}', ['jekyll'])
 });
 
 // Jekyll task: build Jekyll

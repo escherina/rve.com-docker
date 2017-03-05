@@ -187,3 +187,22 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./_site/assets'))
 })
 ```
+
+#### Re-structuring the watch task
+
+Our two gulp.watch tasks are currently sitting inside the browsersync task, but we'll need to add more as we continue to add tasks to our build process, e.g. watching JavaScript or image files. It's a bit cleaner to have one big watch task where we can easily see and control all the different files we're watching.
+
+At the moment, this is how our gulpfile is structured:
+
+1. We type `gulp` into the terminal, and the default task is initiated, but it won't run until its dependencies, the jekyll and browsersync tasks, are complete.
+2. The jekyll and browsersync tasks are run.
+  - The jekyll task is a one-time build of jekyll that begins and ends
+  - The browsersync task serves the site and makes it accessible to us in the browser. It watches files in `/_site` and will reload the browser if anything changes.
+    - Within the browsersync task is a gulp.watch task which will rebuild jekyll if any of the stated filetypes in the project folder change.
+    - There is also a gulp.watch task which will run the sass task if any of the Sass files in the project folder change.
+
+A better structure might be this:
+
+1. The default gulp task is initiated. It won't run until its dependency, the watch task, is complete.
+2. The watch task contains a line for watching jekyll files, and a line for watching Sass files. It won't run until its dependencies, the jekyll and browsersync tasks, are complete.
+3. 

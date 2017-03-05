@@ -1,9 +1,0 @@
-gulp:
-  container_name: rhianvanesch.com
-  build: .
-  ports:
-    - "9999:9999"
-  volumes:
-    - ./jekyll-app:/rve-docker/jekyll-app
-    - ./gulp:/rve-docker/gulp
-    - ./build:/rve-docker/build

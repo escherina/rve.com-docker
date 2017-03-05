@@ -10,7 +10,7 @@ In [the last post in this series](/articles/2017/01/10/using-gulp-to-manage-a-je
 - installed [gulp](http://gulpjs.com/) and learned how to set up a basic gulp task
 - created tasks to build the Jekyll site, serve it with BrowserSync, and watch files for changes
 
-So far, we've been more or less emulating the default `jekyll serve` task. Now it's time to add in some extra functionality.
+So far, we've been more or less emulating the default `jekyll build` and `jekyll serve` tasks. Now it's time to add in some extra functionality.
 
 ### 1. Create a task to compile Sass files
 
@@ -131,3 +131,59 @@ If we now run `gulp sass` in our terminal, we'll see a file called `main.css` ap
 This is great, but at the moment it's not connected to our default gulp task in any way, and will only be run if we deliberately type `gulp sass`. Ideally, we'd like to have it run automatically whenever a `.scss` file changes. That means we need to watch the files with a gulp watch task.
 
 ### 2. Watching files with gulp
+
+We are currently watching our Jekyll files for changes within our browsersync task:
+
+``` js
+// browserSync task: serve the site and watch for changes to files
+gulp.task('browsersync', () => {
+  browsersync({
+    // Where to serve the files from (the build directory)
+    server: {
+      baseDir: '_site'
+    },
+    files: '_site/**', // watch the build directory for changes
+    port: 4000 // optional, set it for a specific port
+    })
+
+  // Watch all these filetypes, and if they change, rebuild Jekyll
+  gulp.watch('**/*.{html,markdown,md,yml,json,xml}', ['jekyll'])
+});
+```
+
+We could add another line to keep an eye on our Sass files, too:
+
+``` js
+// Watch all these filetypes, and if they change, rebuild Jekyll
+  gulp.watch('**/*.{html,markdown,md,yml,json,xml}', ['jekyll'])
+// Watch all Sass files, and if they change, run the sass task
+  gulp.watch('**/*.{scss,sass}', ['sass'])
+```
+
+This will partly work. Whenever we make a change to any of our Sass files, the sass task will fire and will recompile our Sass, including source maps. We'll get a new `main.css` in the `/assets` directory. However, we won't see any changes in our website in the browser, because:
+
+1. Browsersync is only watching for changes in the `/_site` directory and won't refresh the page until it sees them
+2. As part of the default gulp task, we've already run the Jekyll build task (which would place anything in `/assets` into the `/_site` directory). We'd need to run it again to get our newly changed `main.css` into the `/_site` directory.
+
+There's a quick way to fix this. We know we need to place the output of our sass task into `/assets`, so that when the `jekyll` task runs in future, it'll put a copy into the `/_site` directory. We can add another line to put a copy of the output directly and immediately into the `/_site` directory. This will cause Browsersync to reload the page in the browser (since a file in `/_site` has changed) and it will make sure the correct css file is being used at all times. 
+
+It has the added benefit of not re-running the Jekyll task, which seems unnecessary.
+
+Here's the new sass task:
+
+``` js
+// Sass task: compile .scss files
+gulp.task('sass', () => {
+  // Location of source file. '.' is the project root
+  return gulp.src('./_sass/main.scss') 
+    // Initialise sourcemap generation:
+    .pipe(sourcemaps.init())
+    // compile Sass files
+    .pipe(sass().on('error', sass.logError))
+    // write sourcemaps into the /maps directory, inside gulp.dest
+    .pipe(sourcemaps.write('./maps'))
+    // Location of destination file(s). '.' is the project root
+    .pipe(gulp.dest('./assets'))
+    .pipe(gulp.dest('./_site/assets'))
+})
+```

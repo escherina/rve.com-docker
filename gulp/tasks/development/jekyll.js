@@ -8,7 +8,7 @@ var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"; // windows 
 gulp.task('jekyll', function(done) {
   browsersync.notify('Compiling Jekyll');
 
-  return cp.spawn(jekyll, ['build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], { stdio: 'inherit' })
+  return cp.spawn(jekyll, ['build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config, '--drafts'], { stdio: 'inherit' })
   .on('close', done);
 });
 

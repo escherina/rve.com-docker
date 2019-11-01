@@ -1,3 +1,5 @@
+⚠⚠⚠ **This project is now archived. I no longer build my website using Jekyll and the dependencies are very out-of-date - proceed with caution!** ⚠⚠⚠
+
 # rhianvanesch.com
 
 ## Install
